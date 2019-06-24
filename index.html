@@ -1,0 +1,253 @@
+<!DOCTYPE html><html lang="ja"><head><!-- Anti-Flicker Snippet -->
+<style>.async-hide { opacity: 0 !important} </style>
+<script>
+(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);
+})(window,document.documentElement,'async-hide','dataLayer',4000,{'GTM-5TQGT5L':true});
+</script>
+<!-- End Anti-Flicker Snippet -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5TQGT5L');</script>
+<!-- End Google Tag Manager -->
+<meta charset="utf-8" /><meta content="IE=edge" http-equiv="X-UA-Compatible" /><meta content="width=device-width, initial-scale=1" name="viewport" /><title>tech boost</title><meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="6z/YUSWEQvbNMUWm1uQc2Yg58rrOlrKqtnHaCYu6OTJZ7IBpwv0alRpGaJggkp1AT3v0QozAsOGn8ScTJbjV7A==" /><link rel="shortcut icon" type="image/x-icon" href="/assets/favicon-a1484446ccb9dccafcf4a036951749501805cc76eee01e63271fb89375405d56.ico" /><link rel="stylesheet" media="screen" href="/assets/application-a2edd266662105417efeaeddc1d08edd4fa89ca41e5bd5dda3cde9290d2b07c8.css" /><script src="/assets/application-b9ac8f158fe9c8c4de606a20f5116c96001e4ea961e8b79aa1d39918c4d2d5fc.js"></script></head><body><!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5TQGT5L"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<nav class="navbar navbar-inverse navbar-fixed-top"><div class="container"><div class="navbar-header"><button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="/students"><img class="logo" src="/assets/logo-eab2cd88b463f9fae2c73de6d534e26d32e1e9df1fa045c0798db4dab42c2baa.png" alt="Logo" /></a></div><div class="collapse navbar-collapse" id="navbar"><ul class="nav navbar-nav navbar-left"><li><a href="/students/users">マイページ</a></li><li><a href="/students/courses">受講中コース</a></li><li><a href="/students/questions">質問一覧</a></li><li><a href="/students/assignments">課題一覧</a></li><li><a href="/students/reports">メンタリング</a></li><li><a href="/students/questions/generals">お問い合わせ</a></li></ul><ul class="nav navbar-nav navbar-right"><li class="study-timer"><a class="btn btn-danger" id="btn-study-timer"><i class="fa fa-play" id="btn-study-timer-icon"></i></a><div class="study-timer-text"><div><small id="study-timer-text-message">学習記録</small></div><div><small id="study-timer-text-counter">00:00:00</small></div></div></li><li><a rel="nofollow" data-method="post" href="/logout">ログアウト</a></li></ul></div></div></nav><div class="main"><div class="container"><div class="book-detail"><div class="enlargement-image"></div><h1>02 開発環境を構築する - Cloud9基礎</h1><div class="row"><div class="col-md-9"><div class="card"><div class="content"><div class="book-markdown"><div class='markdown-contents'><h1>Cloud9基礎(開発環境を構築する)</h1>
+
+<h2>この章の目的</h2>
+
+<ul>
+<li>用語「環境構築」「IDE」を理解する</li>
+<li>アプリケーション開発に必要な環境構築をクラウド上に行う</li>
+</ul>
+
+<h2>目次</h2>
+
+<ul>
+<li><a href="#">「環境構築」について</a></li>
+<li><a href="#">「環境構築」を行う</a></li>
+<li><a href="#">手順</a></li>
+<li><a href="#">「Cloud9」解説</a></li>
+<li><a href="#">本章は↑までで終わりですが・・</a></li>
+</ul>
+
+<h3>1.「環境構築」について</h3>
+
+<p>この章では、環境構築を行います。</p>
+
+<p>「環境構築」とは簡単に言うと、「開発に必要なツールをコンピュータに入れて動くように設定していく作業のこと」です。</p>
+
+<p>たとえば、皆さんが実際に希望の企業に就職して、アプリケーションの開発に携わることになった日のことを想像してみてください。</p>
+
+<p>今日は記念すべき出社１日目です。デスクには、事前に希望したハイスペックなPCが用意されています。</p>
+
+<p>実は、このPC、出荷時の状態に初期化されていることがほとんどです。</p>
+
+<p>まず最初にやるべきことは何でしょうか。そう、環境構築です。</p>
+
+<p>アプリケーションを開発する際、ユーザーが実際にアクセスしているアプリケーション(「本番環境」と言います)のソースコードをそのまま直接編集すると大変なことになるのは、<br>
+皆さん想像できますよね？</p>
+
+<p>もしも、書いたコードに何らかのミスがあれば、即ユーザーの画面でバグが発生してしまいます。</p>
+
+<p>なので、開発時には、手元のPCに本番環境のコピー(これを「開発環境」と言います)を用意して、そっちのソースコードを編集していくわけです。</p>
+
+<p>ちなみに、この手元のPCを「ローカル(ローカル環境)」と言ったりします。これもエンジニアの会話で頻出の用語なので知っておきましょう。</p>
+
+<p>※余談ですが、どうしても本番環境を直接触る必要があるときは、かなり気をつけて触るようにしましょう。<br>
+<a href="https://it.srad.jp/story/17/02/02/0847239/">こんな事件（外部サイト）</a>もありました...。</p>
+
+<p>繰り返しになりますが、開発するためにデータベースやサーバー等をローカルのPCに構築していくのですが、<br>
+この一連の作業を「環境構築」と呼びます（正確には、本番環境にデータベースやサーバー等を構築することも環境構築なのですが、<br>
+これは大抵、ソフトウェアエンジニアではなくインフラエンジニアがやってくれます。<br>
+ソフトウェアエンジニアの皆さんが就職してまず必要になるのは、ローカルの環境構築です）。</p>
+
+<h3>2. 「環境構築」を行う</h3>
+
+<p>ここまで「環境構築とは何か」をざっくり説明しましたが、さて、ここからは、環境構築を実際に行ってもらいます。</p>
+
+<p>とはいえ、これは実は大変難しいお話です。</p>
+
+<p>なぜなら、環境構築をきちんと理解するためには、今から扱おうとしているプログラミング言語やデータベースやWEBサーバーがコンピュータのどこに配置されて、<br>
+どのようにコンピュータを動かすのか、もっと言えば、OSそのものの知識など、ハードウェアに近い部分の知識が必要になるからです。</p>
+
+<p>正直、現役エンジニアでも環境構築にハマると辛いです。<br>
+ここが初学者にとって最初で最大の挫折ポイントです。</p>
+
+<p>ですが、安心してください。</p>
+
+<p>実際の業務では、普通は環境構築のための「手順書」が用意されているものです。</p>
+
+<p>それに習って、ここでも手順書通りに作業を行い、環境構築を行ってみましょう。</p>
+
+<p>加えて、学習用にかなり簡単に済むようにしてあります。</p>
+
+<p>疑問に思うことも色々あるとは思いますが、まずはやってみましょう！</p>
+
+<p>解説は最後にあるので、無事に環境構築が済んだら読んでみてください。疑問が解消されるはずです。</p>
+
+<p>環境構築のポイントは「ひとつひとつ、確実に行うこと」です。詰まったら強引に先に進まずに、きちんと対処しましょうね。</p>
+
+<hr>
+
+<h3>手順</h3>
+
+<p>１，GoogleChromeを開く（他のブラウザだと不具合が起きることがあります）。Adblockのアドオンを入れている場合は、オフにする。</p>
+
+<p>２，<a href="https://portal.aws.amazon.com/billing/signup#/start">AWSアカウントを作成する</a>。<br>
+すでに持っている場合は２へ（アカウントが有効になるまでに最大24時間かかりますが、ほとんどは10分程度で有効になります）。</p>
+
+<p>※AWSのアカウント作成時、悪用防止のためにクレジットカードの登録が必須ですが、このカリキュラムで使うサービスは無料です。<br>
+詳細は<a href="https://aws.amazon.com/jp/cloud9/pricing/">こちら</a>でご確認ください。</p>
+
+<p>※クレジットカードをお持ちでない、もしくは登録に抵抗がある方がいらっしゃいましたら、運営までご連絡ください。学習の難易度は上がりますが、別途、Cloud9を使用しないカリキュラムの準備がございます。</p>
+
+<p>３，作成したアカウントよりAWSに<a href="https://aws.amazon.com/">ログイン</a>後、<a href="https://us-east-2.console.aws.amazon.com/console/">AWSコンソール</a>にアクセスし、<br>
+　　検索ボックスに半角で&quot;Cloud9&quot;と入力して出てきた結果をクリック。Cloud9の管理ページにアクセスする。</p>
+
+<p><img src="https://tech-boost-prod.s3.amazonaws.com/uploads/book_image/content/845/784203e1-ff63-44b4-9411-4d6096c3ab3e.jpg" alt="aws_console"><br>
+<img src="https://tech-boost-prod.s3.amazonaws.com/uploads/book_image/content/846/08d552a2-b3c5-46b0-9f88-e84a1171a704.jpg" alt="aws_console2"></p>
+
+<p>４，&quot;Create environment&quot;をクリックし、情報を適宜入力。&quot;Environment name and description&quot;の&quot;Name&quot;欄には&quot;techboost&quot;と入力(本来は自由なのですが、受講生間の差異を少なくし、その後の説明を簡略化するために、ここでは統一しました)。その他、初期設定値があるものに関してはそのままにしておく。</p>
+
+<p>※下記画面の&quot;Instance Type&quot;の設定は料金に関わる重要な項目です。&quot;t2.micro (1 GiB RAM + 1 vCPU)&quot;に設定されているかどうか必ず確認してください。</p>
+
+<p><img src="https://tech-boost-prod.s3.amazonaws.com/uploads/book_image/content/847/d754a338-e871-43f2-9950-463707be69c9.jpg" alt="c9_setting"></p>
+
+<p>５，&quot;Review&quot;画面で設定内容の確認。&quot;Instance type&quot; が&quot;t2.micro&quot;になっているか再度確認。問題なければ&quot;Create environment&quot;をクリック。</p>
+
+<p><img src="https://tech-boost-prod.s3.amazonaws.com/uploads/book_image/content/848/95692336-0ce3-4f45-94bb-108af433f9f8.jpg" alt="c9_setting_review"></p>
+
+<p>以下の画面が出ればOK<br>
+<img src="https://tech-boost-prod.s3.amazonaws.com/uploads/book_image/content/849/5a8883ee-d9f3-4626-86af-e44a6a556bca.jpg" alt="c9"></p>
+
+<p>６，歯車のマークをクリックし、&quot;Show Hidden Files&quot;をクリック、設定にチェックを入れる(ファイル名が.から始まる隠しファイルが表示される設定です。開発時に必要になります<br>
+  )</p>
+
+<p><img src="https://tech-boost-prod.s3.amazonaws.com/uploads/book_image/content/850/a65f75f6-9113-4185-b752-a4998808e58a.jpg" alt="c9_setting_show_hidden_file"></p>
+
+<p>７，Railsコースの方は7-a、Laravelコースの方は7-bへ</p>
+
+<p>7−a<br>
+以下の画像を参考に、①の歯車をクリックし、②の&quot;Soft Tabs&quot;に&quot;2&quot;を設定する<br>
+※Rubyのインデントは2つのスペースを使うのが慣習です。インデントが何かわからない人は意味を調べましょう</p>
+
+<p><img src="https://tech-boost-prod.s3.amazonaws.com/uploads/book_image/content/851/8776b434-7fb6-4446-947d-983f2649e332.jpg" alt="c9_setting_tab"></p>
+
+<p>以下のコマンドを１つずつコピーしてターミナルに入力(ターミナルがどこかは、少し下の『Cloud9』解説」１枚目の画像に記してあります)</p>
+
+<pre><code>sh -c &quot;$(curl -fsSL https://gist.githubusercontent.com/hash52/7e8e26cc9c588c555acb5b9abdf75927/raw/3c08e73540c40dc154d1fd7c69527d1a5cd8b6d8/c9-setting-for-rails.sh)&quot;
+</code></pre>
+
+<pre><code>sudo yum install -y mysql-devel
+</code></pre>
+
+<p>7−b<br>
+以下のコマンドをコピーしてターミナルに入力</p>
+
+<pre><code>sh -c &quot;$(curl -fsSL https://gist.githubusercontent.com/hash52/1881b59b1033c01b4da222dce470e903/raw/a46cb200f7cb76b5edb9a827b6789809dc1d5445/c9-setting-for-laravel.sh)&quot;
+</code></pre>
+
+<hr>
+
+<h3>3.「Cloud9」解説</h3>
+
+<p>どうでしたか？拍子抜けするほど簡単でしたね。</p>
+
+<p>ここでは、Cloud9という名前の、クラウド上のIDE(統合開発環境)を使用します。</p>
+
+<p>IDEとは、プログラミングに必要なツールが全て揃ったアプリケーションのことです。</p>
+
+<p>これをさらに理解するには、「そもそもプログラミングに必要なツールとは何なのか」を理解する必要があります。<br>
+詳細を説明すると専門的になり過ぎるので、ここではざっくり説明します。一つ一つの用語がわからなくても、今はあまり問題ありません。</p>
+
+<p>簡単に言うと、テキストエディタ、コンパイラ、デバッガーです。</p>
+
+<p>IDEを使えば１つのアプリケーション上でこれらが完結し、使わなければそれらを別個に操作する必要があります。</p>
+
+<p>※他にも、代表的なIDEとして、RubyMine、PHPStorm、iOSアプリ開発ができるXcodeや、Androidアプリ開発のAndroidStudio等があります。</p>
+
+<p>実際にCloud9の画面を見てみましょう</p>
+
+<p><img src="https://tech-boost-prod.s3.amazonaws.com/uploads/book_image/content/852/134d56aa-4053-4e6f-8e22-abbf41548526.jpg" alt="cloud9"></p>
+
+<p>皆さんが主に使うことになるのは、エディタとターミナルです。</p>
+
+<p>エディタはその名の通り文章を編集したりするツールのことで、パソコンにある「メモ帳」も、.txt(テキスト)ファイルを編集するためのエディタの一種です。</p>
+
+<p>ここでは、プログラミングをするのに便利な機能がたくさん入ったエディタを使います。</p>
+
+<p>ターミナルは、これは見慣れないかもしれません。</p>
+
+<p>「キーボードからコンピュータを操作するためのインターフェース」なのですが、要は、マウスやウィンドウを使わずにコンピュータを操作するために用意された方法がこれです。</p>
+
+<p>たとえば、普段、皆さんがフォルダを移動させるときは、マウスを使ってドラッグアンドドロップしたりすると思いますが、あれと同じことをキーボードからの命令だけでできます。</p>
+
+<p>ちょっと専門的なことをやろうと思ったり、サーバーやデータベースを触る際には必須となるので、エンジニアなら必ず慣れてください。 </p>
+
+<p>皆さんのPCにもターミナルはあります。</p>
+
+<p>ここでは、AWS(クラウド)上のコンピュータを遠隔操作するためのインターフェースとして、ターミナルが用意されています。</p>
+
+<p>※キーボード入力と文字表示だけでコンピュータを操作するターミナルのようなインターフェースを「CUI」、<br>
+  ボタンやウィンドウと言ったグラフィカルな部品から成り立つインターフェースを「GUI」と言います。エンジニアの常識なので知っておきましょう。</p>
+
+<p>今はよくわからないかもしれませんが、使っていくうちに慣れて理解できると思います。</p>
+
+<p>さあ、次章から実際に使ってみましょう！</p>
+
+<h3>※本章は↑までで終わりですが・・</h3>
+
+<p>「１，２で学んだ環境構築の話と、Cloud9の話が噛み合わず、どうも違和感がある」</p>
+
+<p>こう感じている人は鋭いです。</p>
+
+<p>勘の良い人はお気づきかもしれませんが、実は、ここではローカルに何一つインストールせず、クラウド上に開発環境を構築しました。</p>
+
+<p>こうしたのにはいくつか理由があります。</p>
+
+<p>ひとつは、ここで<a href="#">「環境構築」について理解しよう</a>で解説したような本格的な手法を記しても、おそらく皆さんにとっては、大変な割には全く理解できず、<br>
+「ただ手順をコピーをして結果を確認するだけの作業」になってしまうからです。</p>
+
+<p>環境構築は全てCUI(ターミナル)で行います。</p>
+
+<p>なので、初学者にとっては、エラーが出ても自力での解決はまず不可能、エラーが出ているかどうか把握すらできないかもしれません。</p>
+
+<p>プログラミング初心者の皆さんにとって、それはあまりに大変です。</p>
+
+<p>ふたつめに、皆さんのお持ちのPCの環境はそれぞれ異なっているため、正確な手順書の作成が不可能という点が挙げられます。</p>
+
+<p>皆さんのPCにはWindows,MacのOSの違いがあり、さらにはOSごとにバージョンの違いも存在します。</p>
+
+<p>IT技術というのは日進月歩で、OSのバージョンがひとつ変わるだけで他のツールが動かなくなったりする世界です。</p>
+
+<p>既にインストールされたツールが悪さをして、他のツールが動かなくなるなんてこともあります。</p>
+
+<p>つまり、皆さんそれぞれのローカル環境が違う以上、全員がスムーズに進められるような環境構築の手順書を記すのは不可能なのです。</p>
+
+<p>(※逆に言えば「環境構築の構築でエラーが出たときには、OSやアプリケーションのバージョンを確認することが大切」ってことですね！)</p>
+
+<p>エンジニアであれば、手順書と自分の環境に差異があっても自力で解決して進めるのですが、今の皆さんにはまだ無理です。</p>
+
+<p>メンターのサポートを待っている間、学習はストップしてしまいます。</p>
+
+<p>以上を避けるために、ここでは、本格的な環境構築は行わず、クラウド上のIDEを利用しました。</p>
+
+<p>IDEを使う狙いは、皆さんに、基本以外のことはあまり意識せずにプログラミングを学んでいただきたいからです。</p>
+
+<p>何かを学ぶときに、複数の(しかも難解な)内容を並列して学ぶのはあまり得策とは言えません。</p>
+
+<p>とはいえ、ローカルの環境構築は、エンジニアとして仕事をするのであれば、いずれ必ず必要となる知識です。</p>
+
+<p>なので、ここでは、皆さんに少しでも実際の業務をイメージして頂くために、<a href="#">「環境構築」について理解しよう</a>を記述しました。</p>
+
+<p>もし本格的な環境構築に興味がある方は、カリキュラム外ですが、「[PCのOS名]　[環境構築したいフレームワークや言語] 環境構築」などで検索すると、<br>
+やり方が出てくるので参考にしてみてください（その際は、できるだけ新しく、公式に近い情報を参考にすることが大切です）。</p>
+</div></div></div><hr />
